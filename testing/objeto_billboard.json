@@ -1,0 +1,303 @@
+{
+    "nombre": "objeto_billboard",
+    "layout": {
+        "etiqueta": "objeto_texturado_3d",
+        "elementos": [
+            {
+                "semantica": "POSITION",
+                "index": 0,
+                "tipo": "float3"
+            },
+            {
+                "semantica": "NORMAL",
+                "index": 0,
+                "tipo": "float3"
+            },
+            {
+                "semantica": "TEXCOORD",
+                "index": 0,
+                "tipo": "float3"
+            }
+        ]
+    },
+    "vertexshader": {
+        "nombre": "vs_objeto_billboard",
+        "path": "vs_objeto_billboard.hlsl",
+        "texturas_2d": [],
+        "texturas_2d_array": [],
+        "texturas_3d": [],
+        "samplers": [],
+        "cbuffers": [
+            {
+                "tipo": "cbuffer",
+                "nombre": "cbuffer_subobjeto",
+                "tamanio_array": 1,
+                "semantica": "CBUFFER_SUBOBJETO",
+                "tamanio": 4,
+                "tamanio_adaptado": 16,
+                "clase": "SUBOBJETO",
+                "register": {
+                    "tipo": "b",
+                    "numero": 0,
+                    "subcomponente": 0
+                },
+                "variables": [
+                    {
+                        "tipo": "int",
+                        "nombre": "material_actual",
+                        "tamanio_array": 1,
+                        "semantica": "SUBOBJETO_MATERIAL_ACTUAL",
+                        "tamanio": 4,
+                        "tamanio_adaptado": 16,
+                        "packoffset": {
+                            "numero": 0,
+                            "componente": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "tipo": "cbuffer",
+                "nombre": "cbuffer_escena",
+                "tamanio_array": 1,
+                "semantica": "CBUFFER_ESCENA",
+                "tamanio": 1940,
+                "tamanio_adaptado": 2000,
+                "clase": "ESCENA",
+                "register": {
+                    "tipo": "b",
+                    "numero": 1,
+                    "subcomponente": 0
+                },
+                "variables": [
+                    {
+                        "tipo": "matrix",
+                        "nombre": "matriz_vista",
+                        "tamanio_array": 1,
+                        "semantica": "ESCENA_MATRIZ_VISTA",
+                        "tamanio": 64,
+                        "tamanio_adaptado": 64,
+                        "packoffset": {
+                            "numero": 0,
+                            "componente": ""
+                        }
+                    },
+                    {
+                        "tipo": "int",
+                        "nombre": "null_light",
+                        "tamanio_array": 1,
+                        "semantica": "ESCENA_NULL_LIGHT",
+                        "tamanio": 4,
+                        "tamanio_adaptado": 16,
+                        "packoffset": {
+                            "numero": 4,
+                            "componente": ""
+                        }
+                    },
+                    {
+                        "tipo": "int",
+                        "nombre": "directional_light",
+                        "tamanio_array": 1,
+                        "semantica": "ESCENA_DIRECTIONAL_LIGHT",
+                        "tamanio": 4,
+                        "tamanio_adaptado": 16,
+                        "packoffset": {
+                            "numero": 5,
+                            "componente": ""
+                        }
+                    },
+                    {
+                        "tipo": "int",
+                        "nombre": "point_light",
+                        "tamanio_array": 1,
+                        "semantica": "ESCENA_POINT_LIGHT",
+                        "tamanio": 4,
+                        "tamanio_adaptado": 16,
+                        "packoffset": {
+                            "numero": 6,
+                            "componente": ""
+                        }
+                    },
+                    {
+                        "tipo": "int",
+                        "nombre": "spot_light",
+                        "tamanio_array": 1,
+                        "semantica": "ESCENA_SPOT_LIGHT",
+                        "tamanio": 4,
+                        "tamanio_adaptado": 16,
+                        "packoffset": {
+                            "numero": 7,
+                            "componente": ""
+                        }
+                    },
+                    {
+                        "tipo": "int",
+                        "nombre": "cantidad_de_luces",
+                        "tamanio_array": 1,
+                        "semantica": "ESCENA_CANTIDAD_DE_LUCES_EN_ESCENA",
+                        "tamanio": 4,
+                        "tamanio_adaptado": 16,
+                        "packoffset": {
+                            "numero": 8,
+                            "componente": ""
+                        }
+                    },
+                    {
+                        "tipo": "Luz",
+                        "nombre": "luces",
+                        "tamanio_array": 16,
+                        "semantica": "ESCENA_LUCES",
+                        "tamanio": 1792,
+                        "tamanio_adaptado": 1792,
+                        "packoffset": {
+                            "numero": 9,
+                            "componente": ""
+                        }
+                    },
+                    {
+                        "tipo": "matrix",
+                        "nombre": "matriz_proyeccion",
+                        "tamanio_array": 1,
+                        "semantica": "ESCENA_MATRIZ_PROYECCION",
+                        "tamanio": 64,
+                        "tamanio_adaptado": 64,
+                        "packoffset": {
+                            "numero": 121,
+                            "componente": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "tipo": "cbuffer",
+                "nombre": "cbuffer_objeto",
+                "tamanio_array": 1,
+                "semantica": "CBUFFER_OBJETO",
+                "tamanio": 1280,
+                "tamanio_adaptado": 1280,
+                "clase": "OBJETO",
+                "register": {
+                    "tipo": "b",
+                    "numero": 2,
+                    "subcomponente": 0
+                },
+                "variables": [
+                    {
+                        "tipo": "matrix",
+                        "nombre": "matriz_normal",
+                        "tamanio_array": 1,
+                        "semantica": "OBJETO_MATRIZ_NORMAL",
+                        "tamanio": 64,
+                        "tamanio_adaptado": 64,
+                        "packoffset": {
+                            "numero": 0,
+                            "componente": ""
+                        }
+                    },
+                    {
+                        "tipo": "matrix",
+                        "nombre": "matriz_mundo",
+                        "tamanio_array": 1,
+                        "semantica": "OBJETO_MATRIZ_MUNDO",
+                        "tamanio": 64,
+                        "tamanio_adaptado": 64,
+                        "packoffset": {
+                            "numero": 4,
+                            "componente": ""
+                        }
+                    },
+                    {
+                        "tipo": "Material",
+                        "nombre": "material",
+                        "tamanio_array": 16,
+                        "semantica": "OBJETO_MATERIALES",
+                        "tamanio": 1088,
+                        "tamanio_adaptado": 1088,
+                        "packoffset": {
+                            "numero": 8,
+                            "componente": ""
+                        }
+                    },
+                    {
+                        "tipo": "matrix",
+                        "nombre": "matriz_textura",
+                        "tamanio_array": 1,
+                        "semantica": "OBJETO_MATRIZ_TEXTURA",
+                        "tamanio": 64,
+                        "tamanio_adaptado": 64,
+                        "packoffset": {
+                            "numero": 76,
+                            "componente": ""
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "pixelshader": {
+        "nombre": "ps_objeto_billboard",
+        "path": "ps_objeto_billboard.hlsl",
+        "texturas_2d": [],
+        "texturas_2d_array": [
+            {
+                "tipo": "Texture2DArray",
+                "nombre": "texture_2d_resourceview",
+                "tamanio_array": 1,
+                "semantica": "TEXTURA_ARRAY",
+                "tamanio": 0,
+                "tamanio_adaptado": 16,
+                "register": {
+                    "tipo": "t",
+                    "numero": 0,
+                    "subcomponente": 0
+                }
+            }
+        ],
+        "texturas_3d": [],
+        "samplers": [
+            {
+                "tipo": "SamplerState",
+                "nombre": "sampler_lineal",
+                "tamanio_array": 1,
+                "semantica": "SAMPLER",
+                "tamanio": 0,
+                "tamanio_adaptado": 16,
+                "register": {
+                    "tipo": "s",
+                    "numero": 0,
+                    "subcomponente": 0
+                }
+            }
+        ],
+        "cbuffers": [
+            {
+                "tipo": "cbuffer",
+                "nombre": "cbuffer_objeto",
+                "tamanio_array": 1,
+                "semantica": "CBUFFER_OBJETO",
+                "tamanio": 4,
+                "tamanio_adaptado": 16,
+                "clase": "OBJETO",
+                "register": {
+                    "tipo": "b",
+                    "numero": 0,
+                    "subcomponente": 0
+                },
+                "variables": [
+                    {
+                        "tipo": "int",
+                        "nombre": "video_frame_actual",
+                        "tamanio_array": 1,
+                        "semantica": "OBJETO_VIDEO_FRAME_ACTUAL",
+                        "tamanio": 4,
+                        "tamanio_adaptado": 16,
+                        "packoffset": {
+                            "numero": 0,
+                            "componente": ""
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

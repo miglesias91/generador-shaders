@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de código fuente">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="fragmentos">
+      <UniqueIdentifier>{8fdef020-3acd-4677-8b17-886206e0b2cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fragmentos\vertexshader">
+      <UniqueIdentifier>{9d492d27-8807-4ccc-bf2a-1bcd028ebeb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fragmentos\pixelshader">
+      <UniqueIdentifier>{70ec6a73-3d9f-4873-8ec6-acbe20686370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fragmentos\pgs">
+      <UniqueIdentifier>{8de03336-a3d3-4625-9b59-df505b75cd92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fragmentos\gpu-pro-6">
+      <UniqueIdentifier>{968c0168-7c4d-444b-8196-290908800c8f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="fragmentos\gpu-pro-6\AmbientLighting.hlsl">
+      <Filter>fragmentos\gpu-pro-6</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\gpu-pro-6\ComputeNormal.hlsl">
+      <Filter>fragmentos\gpu-pro-6</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\gpu-pro-6\GetDiffuseColor.hlsl">
+      <Filter>fragmentos\gpu-pro-6</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pgs\CalculateLinearFogFactor.hlsl">
+      <Filter>fragmentos\pgs</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pgs\GetLightingColor.hlsl">
+      <Filter>fragmentos\pgs</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pgs\GetLightingColorWithFog.hlsl">
+      <Filter>fragmentos\pgs</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pgs\GetPosition.hlsl">
+      <Filter>fragmentos\pgs</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pgs\GetTextureColor.hlsl">
+      <Filter>fragmentos\pgs</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pgs\GetTransformedNormal.hlsl">
+      <Filter>fragmentos\pgs</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pgs\GetVertexLighting.hlsl">
+      <Filter>fragmentos\pgs</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pgs\Lighting.hlsl">
+      <Filter>fragmentos\pgs</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pgs\TextureTransform.hlsl">
+      <Filter>fragmentos\pgs</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pixelshader\LightPosNormalized.hlsl">
+      <Filter>fragmentos\pixelshader</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pixelshader\PhongDiffuseAndSpecularColor.hlsl">
+      <Filter>fragmentos\pixelshader</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pixelshader\PhongDiffuseColor.hlsl">
+      <Filter>fragmentos\pixelshader</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pixelshader\PhongSpecularColor.hlsl">
+      <Filter>fragmentos\pixelshader</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\vertexshader\ModelViewLightPos.hlsl">
+      <Filter>fragmentos\vertexshader</Filter>
+    </FxCompile>
+    <FxCompile Include="fragmentos\pixelshader\PhongDiffuseAndSpecularColorWithTex.hlsl" />
+    <FxCompile Include="fragmentos\pixelshader\PhongDiffuseColorWithTex.hlsl" />
+    <FxCompile Include="fragmentos\pixelshader\LightDirNormalized.hlsl" />
+    <FxCompile Include="fragmentos\pixelshader\PhongDiffuseAndSpecularColorWithTex3D.hlsl" />
+    <FxCompile Include="fragmentos\pixelshader\PhongDiffuseColorWithTex3D.hlsl" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,201 @@
+{
+    "nombre": "objeto_2d",
+    "layout": {
+        "etiqueta": "objeto_2d",
+        "elementos": [
+            {
+                "semantica": "POSITION",
+                "index": 0,
+                "tipo": "float3"
+            },
+            {
+                "semantica": "TEXCOORD",
+                "index": 0,
+                "tipo": "float3"
+            }
+        ]
+    },
+    "vertexshader": {
+        "nombre": "vs_objeto_2d",
+        "path": "vs_objeto_2d.hlsl",
+        "texturas_2d": [],
+        "texturas_2d_array": [],
+        "texturas_3d": [],
+        "samplers": [],
+        "cbuffers": [
+            {
+                "tipo": "cbuffer",
+                "nombre": "cbuffer_objeto",
+                "tamanio_array": 1,
+                "semantica": "CBUFFER_OBJETO",
+                "tamanio": 128,
+                "tamanio_adaptado": 128,
+                "clase": "OBJETO",
+                "register": {
+                    "tipo": "b",
+                    "numero": 0,
+                    "subcomponente": 0
+                },
+                "variables": [
+                    {
+                        "tipo": "matrix",
+                        "nombre": "matriz_textura",
+                        "tamanio_array": 1,
+                        "semantica": "OBJETO_MATRIZ_TEXTURA",
+                        "tamanio": 64,
+                        "tamanio_adaptado": 64,
+                        "packoffset": {
+                            "numero": 0,
+                            "componente": ""
+                        }
+                    },
+                    {
+                        "tipo": "matrix",
+                        "nombre": "matriz_imagen",
+                        "tamanio_array": 1,
+                        "semantica": "OBJETO_MATRIZ_IMAGEN",
+                        "tamanio": 64,
+                        "tamanio_adaptado": 64,
+                        "packoffset": {
+                            "numero": 4,
+                            "componente": ""
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "pixelshader": {
+        "nombre": "ps_objeto_2d",
+        "path": "ps_objeto_2d.hlsl",
+        "texturas_2d": [
+            {
+                "tipo": "Texture2D",
+                "nombre": "textura_0",
+                "tamanio_array": 1,
+                "semantica": "TEXTURA_0",
+                "tamanio": 0,
+                "tamanio_adaptado": 16,
+                "register": {
+                    "tipo": "t",
+                    "numero": 0,
+                    "subcomponente": 0
+                }
+            },
+            {
+                "tipo": "Texture2D",
+                "nombre": "textura_1",
+                "tamanio_array": 1,
+                "semantica": "TEXTURA_1",
+                "tamanio": 0,
+                "tamanio_adaptado": 16,
+                "register": {
+                    "tipo": "t",
+                    "numero": 1,
+                    "subcomponente": 0
+                }
+            },
+            {
+                "tipo": "Texture2D",
+                "nombre": "textura_2",
+                "tamanio_array": 1,
+                "semantica": "TEXTURA_2",
+                "tamanio": 0,
+                "tamanio_adaptado": 16,
+                "register": {
+                    "tipo": "t",
+                    "numero": 2,
+                    "subcomponente": 0
+                }
+            },
+            {
+                "tipo": "Texture2D",
+                "nombre": "textura_3",
+                "tamanio_array": 1,
+                "semantica": "TEXTURA_3",
+                "tamanio": 0,
+                "tamanio_adaptado": 16,
+                "register": {
+                    "tipo": "t",
+                    "numero": 3,
+                    "subcomponente": 0
+                }
+            }
+        ],
+        "texturas_2d_array": [],
+        "texturas_3d": [],
+        "samplers": [
+            {
+                "tipo": "SamplerState",
+                "nombre": "sampler_lineal",
+                "tamanio_array": 1,
+                "semantica": "SAMPLER",
+                "tamanio": 0,
+                "tamanio_adaptado": 16,
+                "register": {
+                    "tipo": "s",
+                    "numero": 0,
+                    "subcomponente": 0
+                }
+            }
+        ],
+        "cbuffers": [
+            {
+                "tipo": "cbuffer",
+                "nombre": "cbuffer_subobjeto",
+                "tamanio_array": 1,
+                "semantica": "CBUFFER_SUBOBJETO",
+                "tamanio": 4,
+                "tamanio_adaptado": 16,
+                "clase": "SUBOBJETO",
+                "register": {
+                    "tipo": "b",
+                    "numero": 0,
+                    "subcomponente": 0
+                },
+                "variables": [
+                    {
+                        "tipo": "int",
+                        "nombre": "textura_actual",
+                        "tamanio_array": 1,
+                        "semantica": "SUBOBJETO_TEXTURA_ACTUAL",
+                        "tamanio": 4,
+                        "tamanio_adaptado": 16,
+                        "packoffset": {
+                            "numero": 0,
+                            "componente": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "tipo": "cbuffer",
+                "nombre": "cbuffer_objeto",
+                "tamanio_array": 1,
+                "semantica": "CBUFFER_OBJETO",
+                "tamanio": 4,
+                "tamanio_adaptado": 16,
+                "clase": "OBJETO",
+                "register": {
+                    "tipo": "b",
+                    "numero": 1,
+                    "subcomponente": 0
+                },
+                "variables": [
+                    {
+                        "tipo": "int",
+                        "nombre": "textura_nula",
+                        "tamanio_array": 1,
+                        "semantica": "OBJETO_TEXTURA_NULA",
+                        "tamanio": 4,
+                        "tamanio_adaptado": 16,
+                        "packoffset": {
+                            "numero": 0,
+                            "componente": ""
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

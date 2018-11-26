@@ -1,0 +1,137 @@
+{
+	"semanticas_ordenadas" : ["POSITION", "NORMAL", "TEXCOORD", "COLOR", "BLENDWEIGHT", "BLENDINDICES"],
+
+    "layouts": [
+        {
+            "etiqueta": "objeto_2d",
+            "elementos": [
+                {
+                    "semantica": "POSITION",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "TEXCOORD",
+                    "index": 0,
+                    "tipo": "float3"
+                }
+            ],
+            "semantica_salida_vertex": "ImagePosition"
+        },
+        {
+            "etiqueta": "objeto_sin_textura",
+            "elementos": [
+                {
+                    "semantica": "POSITION",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "NORMAL",
+                    "index": 0,
+                    "tipo": "float3"
+                }
+            ],
+            "semantica_salida_vertex": "ProjectedPosition"
+        },
+        {
+            "etiqueta": "objeto_texturado",
+            "elementos": [
+                {
+                    "semantica": "POSITION",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "NORMAL",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "TEXCOORD",
+                    "index": 0,
+                    "tipo": "float2"
+                }
+            ],
+            "semantica_salida_vertex": "ProjectedPosition"
+        },
+        {
+            "etiqueta": "objeto_texturado_3d",
+            "elementos": [
+                {
+                    "semantica": "POSITION",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "NORMAL",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "TEXCOORD",
+                    "index": 0,
+                    "tipo": "float3"
+                }
+            ],
+            "semantica_salida_vertex": "ProjectedPosition"
+        },
+        {
+            "etiqueta": "objeto_texturado_esqueletico",
+            "elementos": [
+                {
+                    "semantica": "POSITION",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "NORMAL",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "TEXCOORD",
+                    "index": 0,
+                    "tipo": "float2"
+                },
+                {
+                    "semantica": "BLENDWEIGHT",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "BLENDINDICES",
+                    "index": 0,
+                    "tipo": "float4"
+                }
+            ],
+            "semantica_salida_vertex": "ProjectedPosition"
+        },
+        {
+            "etiqueta": "objeto_sin_textura_esqueletico",
+            "elementos": [
+                {
+                    "semantica": "POSITION",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "NORMAL",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "BLENDWEIGHT",
+                    "index": 0,
+                    "tipo": "float3"
+                },
+                {
+                    "semantica": "BLENDINDICES",
+                    "index": 0,
+                    "tipo": "float4"
+                }
+            ],
+            "semantica_salida_vertex": "ProjectedPosition"
+        }
+    ]
+}

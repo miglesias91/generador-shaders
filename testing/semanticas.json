@@ -1,0 +1,92 @@
+{
+	"semanticas" :
+	[	
+		{
+			"semantica_sistema" : "SV_POSITION",
+			"referencia" : "out",
+			"tipo" : "float4",
+			"max_values" : 1,
+			"semanticas_usuario" :
+			[
+				"ProjectedPosition"
+			]
+		},	
+
+		{
+			"semantica_sistema" : "SV_POSITION",
+			"referencia" : "out",
+			"tipo" : "float4",
+			"max_values" : 1,
+			"semanticas_usuario" :
+			[
+				"ImagePosition"
+			]
+		},
+
+		{
+			"semantica_sistema" : "SemanticasVertex",
+			"referencia" : "inout",
+			"tipo" : "matrix",
+			"max_values" : 30,
+			"semanticas_usuario" :
+			[
+				"MatrizMundoVista",
+				"MatrizMundoVistaProy"
+			]
+		},
+
+		{
+			"semantica_sistema" : "SemanticasVertex",
+			"referencia" : "inout",
+			"tipo" : "float4",
+			"max_values" : 30,
+			"semanticas_usuario" :
+			[
+				"Color",
+				"TransformedPosition"
+			]
+		},
+
+		{
+			"semantica_sistema" : "SemanticasVertex",
+			"referencia" : "inout",
+			"tipo" : "float3",
+			"max_values" : 30,
+			"semanticas_usuario" :
+			[
+				"LookAt",
+				"ModelViewNormal",
+				"ModelViewPosition",
+				"TransformedNormal"
+			]
+		},
+
+		{
+			"semantica_sistema" : "SemanticasVertex",
+			"referencia" : "inout",
+			"tipo" : "float2",
+			"max_values" : 30,
+			"semanticas_usuario" :
+			[
+				"ObjetoTexCoord",
+				"BillboardTexCoord"		
+			]
+		},		
+
+		{
+			"semantica_sistema" : "SemanticasPixel",
+			"referencia" : "inout",
+			"tipo" : "float4",
+			"max_values" : 30,
+            "semanticas_usuario": 
+            [
+                "ColorTexturaObjeto",
+                "ColorTexturaObjetoBillboard",
+                "ColorPhongObjeto",
+                "ColorPhongObjetoTexturado",
+                "ColorPhongObjetoBillboard",
+                "ModeloPhong"
+            ]
+		}
+	]
+}
